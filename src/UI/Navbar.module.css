@@ -7,7 +7,9 @@
   background-color: #ffffff;
   position: relative;
   z-index: 20;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  background-color: transparent; /* Make the background fully transparent */
+  box-shadow: none; /* You might want to remove the shadow as well */
+  border-bottom: none;
 }
 
 /* LOGO */
