@@ -1,0 +1,82 @@
+/* ProjectCard.module.css */
+
+.projectCard {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Updated box shadow for better definition */
+  transition: transform 0.3s ease-in-out;
+}
+
+.projectCard:hover {
+  transform: translateY(-4px); /* Subtle lift on hover for all views */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+.projectImageContainer {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Example aspect ratio */
+  overflow: hidden;
+}
+
+.projectImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.projectDetails {
+  padding: 1.5rem;
+}
+
+.projectTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #333;
+}
+
+.projectDescription {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.projectTechList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projectTechItem {
+  background-color: #e7f5ff; /* Light blue background for tech tags */
+  color: #007bff; /* Primary color for tech text */
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #b3d7ff; /* Light blue border for tech tags */
+}
+
+.projectLinks {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.projectLink {
+  text-decoration: none;
+  color: #007bff; /* Primary color for links */
+  font-weight: 500;
+  border: 1px solid #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.projectLink:hover {
+  background-color: #007bff;
+  color: #fff;
+}

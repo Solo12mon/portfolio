@@ -1,0 +1,68 @@
+/* Layout base */
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
+  color: #1f1f1f;
+  letter-spacing: -0.015em;
+  line-height: 1.5;
+  align-items: center; /* Center content horizontally on desktop by default */
+}
+
+/* Header - Glassmorphic and sticky */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1rem 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Main Content */
+.mainContent {
+  flex-grow: 1;
+  padding: 1.25rem 20px;
+  padding-top: clamp(5rem, 6vw, 6rem); /* Adjust for fixed header */
+  transition: padding 0.3s ease-in-out;
+  width: 100%; /* Occupy full width on mobile */
+}
+
+/* Footer */
+.footer {
+  background-color: #f0f0f0;
+
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+/* Desktop View */
+@media (min-width: 769px) {
+  .layoutContainer {
+    align-items: stretch; /* Reset to stretch on desktop to allow full width sections */
+  }
+
+  .mainContent {
+    max-width: 1200px; /* Example maximum width for centered content */
+    margin: 0 auto; /* Center the main content horizontally */
+    padding: 2rem; /* Adjust desktop padding */
+    padding-top: 6rem; /* Adjust top padding for fixed header on desktop */
+  }
+
+  .footer {
+    position: static;
+    width: 100%;
+    padding: 0;
+  }
+}

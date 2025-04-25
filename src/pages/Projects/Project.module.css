@@ -1,0 +1,62 @@
+/* ProjectsPage.module.css */
+
+.projectsPage {
+  padding: 40px 20px; /* Increased overall padding */
+  font-family: "Open Sans", sans-serif; /* Default cool font */
+  color: #333;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 0;
+  margin-bottom: 40px; /* Added margin below hero */
+}
+
+.heroTitle {
+  font-family: "Montserrat", sans-serif; /* Cool heading font */
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #28a745; /* Primary cool color */
+  margin-bottom: 15px;
+}
+
+.heroIntro {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 30px;
+}
+
+/* Desktop View Enhancements */
+@media (min-width: 768px) {
+  .hero {
+    padding: 30px 0;
+    margin-bottom: 60px;
+  }
+
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .heroIntro {
+    font-size: 1.2rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(350px, 1fr)
+    ); /* Slightly wider cards on desktop */
+    gap: 40px;
+  }
+}

@@ -1,0 +1,92 @@
+/* Footer.module.css */
+
+.footer {
+  background-color: #333;
+  color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.copyright p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+.footerNav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.footerNav li a {
+  color: #f8f9fa;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footerNav li a:hover {
+  color: #28a745; /* Highlight color on hover */
+}
+
+.socialLinks {
+  display: flex;
+  gap: 20px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.socialIcon {
+  color: #f8f9fa;
+  transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.socialIcon:hover {
+  color: #007bff; /* Another highlight color on hover */
+  transform: scale(1.1);
+}
+
+.contactInfo p {
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+/* Desktop View Enhancements */
+@media (min-width: 768px) {
+  .footer {
+    padding: 60px;
+  }
+
+  .footerContent {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .footerNav ul {
+    gap: 30px;
+  }
+
+  .copyright p,
+  .footerNav li a,
+  .contactInfo p {
+    font-size: 1rem;
+  }
+
+  .socialLinks {
+    margin-top: 0;
+  }
+}
